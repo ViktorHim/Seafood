@@ -1,0 +1,121 @@
+.product
+		padding-top: 100px
+		&__wrapper
+			display: flex
+			justify-content: space-between
+		&__name
+			padding-top: 41px
+			width: 510px
+			text-align: center
+		&__name-item + &__name-item 
+			margin-top: 30px
+		&__name-item
+			cursor: pointer
+			font-family: 'Roboto Slab', serif
+			font-size: 24px
+			font-weight: 400
+			line-height: 32px
+		&__name-item.slick-current
+			font-size: 36px
+			font-weight: 700
+			color:$blue
+		&__content
+			width: 600px
+		&__content-box
+			display: flex
+			justify-content: space-between
+		&__content-img
+			object-fit: cover
+		&__content-list
+			width: 291px
+			list-style: none
+		&__content-item
+			margin-bottom: 30px
+			span
+				font-family: 'Roboto Slab', serif
+				line-height: 21px
+				color: $blue
+				display: block
+				margin-bottom: 10px
+		&__content-title
+			font-size: 24px
+			color: $blue
+			line-height: 32px
+			font-family: 'Roboto Slab', serif
+			margin-bottom: 20px
+			padding-top: 20px
+			font-weight: 400
+		&__content-text
+			margin-bottom: 25px
+
+.product-prev
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+
+.product-prev, .product-next
+	border: none
+	background-color: transparent
+	padding: 0
+	cursor: pointer
+
+@media ( max-width: 1160px)
+	.product
+		&__name
+			width: 350px
+@media ( max-width: 1000px)
+	.product
+		&__name
+			width: 250px
+@media ( max-width: 890px)
+	.product
+		&__wrapper
+			display: block
+		&__content
+			margin: 0 auto
+		&__name
+			width: 100%
+			padding-top: 0
+			margin-bottom: 90px
+			height: 88px
+		&__name-item + &__name-item 
+			margin-top: 0
+		&__name-item.slick-current
+			line-height: 44px
+		&__name .slick-dots
+			left: 0
+			right: 0
+			flex-direction: row
+			justify-content: center
+			top: 90px	
+			button
+				cursor: pointer
+				width: 10px
+				height: 10px
+				font-size: 0
+				padding: 0
+				border-radius: 50%
+				background-color: $blue
+				margin: 0 10px
+@media ( max-width: 650px)
+	.product__content
+		width: 100%
+	.product
+		&__name-item.slick-current
+			font-size: 30px
+@media ( max-width: 600px)
+	.product
+		&__content-box
+			display: block
+		&__content-list
+			width: 100%
+		&__name-item.slick-current
+			font-size: 36px
+		&__name
+			margin-bottom: 50px
+@media ( max-width: 470px)
+	.product
+		padding-top: 50px
+		&__content-btn
+			padding: 14px 55px

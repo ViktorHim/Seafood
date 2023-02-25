@@ -1,0 +1,129 @@
+.header__top
+		display: flex
+		justify-content: space-between
+		padding-top: 20px
+
+.menu
+		margin-top: 16px
+		&__list
+				display: flex
+				z-index: 5
+		&__item + &__item
+				margin-left: 30px
+		&__link
+				color: $blue
+				text-transform: uppercase
+				font-size: 18px
+				font-weight: 500
+				line-height: 21px
+		&__link:hover
+				border-bottom: 1px solid $blue
+		&__btn
+			display: none
+			width: 40px
+			border: none
+			background-color: transparent
+			padding: 13px 0
+			cursor: pointer
+			position: relative
+			z-index: 10
+			span
+				display: block
+				height: 4px
+				background-color: $blue
+		&__btn::before, &__btn::after
+			content: ''
+			left: 0
+			right: 0
+			height: 4px
+			position: absolute
+			background-color: $blue
+		&__btn::after
+			bottom: 0
+		&__btn::before
+			top: 0
+.phone
+		margin-top: 11px
+		margin-right: 43px
+.logo
+		margin-left: 16px
+
+.header__content
+		background: url(../images/header-bg.png) top / cover no-repeat
+		padding-bottom: 20px
+		margin-top: -100px
+		min-height: calc(100vh - 50px)
+.header__content-box
+		display: flex
+		justify-content: flex-end
+		margin-right: 30px
+		font-size: 18px
+		line-height: 21px
+		color:$white
+.header__content-link_active
+		font-weight: 700
+.title
+		font-weight: 700
+		font-size: 72px
+		line-height: 95px
+		color: $blue
+		font-family: 'Roboto Slab', serif
+		padding-top: 170px
+		padding-left: 112px
+		margin-bottom: 60px
+		max-width: 589px
+
+@media (max-width: 1000px)
+	.menu
+		margin: 12px 20px 0 auto	
+		&__list
+			position: absolute
+			left: 20%
+			right: 20%
+			background-color: #fff
+			display: block
+			top: -350px
+			opacity: 0
+			transition: all 1s
+		&__list.menu__list_active
+			top: 75px
+			opacity: 1
+		&__item + &__item
+			margin-left: 0
+		&__btn
+			display: block
+		&__link
+			display: block
+			padding: 20px 0
+			text-align: center
+		&__link:hover
+			border: none
+
+@media (max-width: 745px)
+	.title
+		font-size: 50px
+		line-height: 66px
+		padding-left: 0px
+		max-width: 100%
+		text-align: center
+@media (max-width: 470px)
+	.title
+		font-size: 34px
+		line-height: 44px
+@media (max-width: 370px)
+	.title
+		padding-top: 125px
+		font-size: 34px
+		line-height: 44px
+		padding-left: 0px
+		max-width: 100%
+		text-align: center
+	.phone
+		margin-right: 0
+	.logo
+		margin-left: 0
+		&__img
+			width: 70%
+	.menu__list
+		left: 10%
+		right: 10%

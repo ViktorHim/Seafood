@@ -1,0 +1,92 @@
+.seafood-box
+	background: url("../images/seafood-bg.jpg") top center / cover no-repeat
+	padding: 290px 0 95px 0
+	&__list
+		list-style: none
+		display: flex
+		justify-content: space-around
+	&__item
+		background: url("../images/shell.svg") center / cover no-repeat
+		width: 180px
+		min-height: 165px
+		font-family: 'Roboto Slab', serif
+		font-size: 18px
+		font-weight: 700
+		line-height: 24px
+		color: $white
+		text-align: center
+		display: flex
+		justify-content: center
+		align-items: center
+
+.seafood
+		padding: 100px 0
+		&__list
+			margin-bottom: 100px
+		&__item
+			display: flex
+			justify-content: space-between
+			margin-bottom: 50px
+			&_text-right .seafood__item-title
+				max-width: 420px
+			&_text-right .seafood__item-content
+				margin-right: 180px
+		&__item-title
+			max-width: 490px
+			font-family: 'Roboto Slab', serif
+			font-size: 24px
+			font-weight: 400
+			line-height: 29px
+			color: $blue
+			margin-bottom: 30px
+		&__item-text
+			margin-bottom: 20px
+			max-width: 420px
+		&__blockquote
+			max-width: 800px
+			margin: 0 auto
+			text-align: center
+		&__blockquote-text
+			max-width: 530px
+			margin: 0 auto
+			font-size: 18px
+			line-height: 24px
+			font-family: 'Roboto Slab', serif
+
+@media ( max-width: 1100px)
+	.seafood
+		&__item-content
+			padding-right: 20px
+		&__item
+			&_text-right .seafood__item-content
+				padding-right: 0
+				padding-left: 20px
+
+
+@media ( max-width: 950px)
+	.seafood
+		img
+			max-width: 100%
+		&__item
+			flex-wrap: wrap
+			justify-content: center
+			&_text-right
+				flex-wrap: wrap-reverse
+			&_text-right .seafood__item-content
+				padding-left: 0px
+				margin-right: 0
+		&__item-content
+			padding-right: 0
+		&__item-title, &__item-text
+			max-width: 100%
+
+
+@media ( max-width: 650px)
+	.seafood-box
+		display: none
+	.seafood
+		padding: 50px 0
+		&__list
+			margin-bottom: 50px
+
+
